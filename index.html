@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,900&family=Raleway:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="gamesec-bg"
+        style="display: none; position: fixed; top: 0; left: 0; z-index: 9990; width: 100%; height: 100%;"></section>
+
+    <section class="wheelcontainer" style="z-index:9999 ;">
+        <div class="spin" id="spin">
+            <div class="spinContainer ">
+                <div class="imgfirst">
+                    <div class="position-relative" style="width: 230px; height: 230px;">
+                        <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_db7jjj32.json"
+                            background="transparent" speed="1" style="overflow:hidden; width:100%" loop autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="giftspin" style="position:absolute; top: 0px; left: 0px; right: 0px; bottom: 0px;">
+                        <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_zn0soefi.json"
+                            class="position-absolute" background="transparent" speed="1"
+                            style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+                    </div>
+                </div>
+                <div class="positon-absolute giftspin" style="position:absolute !important;">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="gameSection text-center" style="z-index: 9999; ">
+            <div class="d-flex align-items-center">
+
+                <div class="col-6s ringsection">
+                    <div class="img3">
+                        <img src="images/newring.png" alt="spin img" class="spin-img1  position-relative"
+                            id="spingame">
+                        <img src="images/newringframe.png" alt="spin img" class="spin-imgframe2 ">
+                    </div>
+                </div>
+                <div class="col-6s spinform text-center">
+                    <div class="gameSectionContainer">
+                        <h1>CODEAEGIS'S SECRET <br> BONUS UNLOCKED</h1>
+                        <div class="d-flex align-items-center">
+                            <p class="pgame"> You have a chance to win a nice big fat discount. are you ready ?</p>
+                        </div>
+                        <div class="form" style="margin-top:33px;">
+                            <div class="spinformcont">
+                                <i class='bx bx-user'></i>
+                                <input type="text" name="name" placeholder="Name" id="name" required> <br>
+                            </div>
+                            <div class="spinformcont">
+                                <i class='bx bx-envelope'></i>
+                                <input type="email" name="email" id="email" placeholder="Email"> <br>
+                            </div>
+                            <div class="spinformcont">
+                                <i class='bx bx-phone'></i>
+                                <input type="text" class="form-control" id="phone" placeholder="Mobile Number"
+                                    name="mobile_number">
+                                <span id="valid-msg" class="hide phonevalidation">✓ Valid</span>
+                                <span id="error-msg" class="hide phonevalidation"></span> <br>
+                            </div>
+                            <input type="submit" value="Try Your Luck" id="spinstart" class="sstart" />
+                        </div>
+                        <p class="btnd">Want to make your Diwali Special ?<br> SPIN the Wheel and get a special discount
+                            !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spinresult text-center" style="z-index: 9999;">
+            <button id="close3" class="close3">x</button>
+            <h2>Congratulations</h2>
+            <div class="result-section">
+                <input type="hidden" id="userName">
+                <input type="hidden" id="userEmail">
+                <input type="hidden" id="userPhone">
+                <p style="margin-bottom:0rem;">You Win </p>
+                <span id="resulthere"></span>
+            </div>
+            <p class="summry">Our Business Strategist will connect with you soon</p>
+        </div>
+    </section>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="/script.js">
+    </script>
+</body>
+
+</html>
